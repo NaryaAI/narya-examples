@@ -1,5 +1,5 @@
-[submodule "lib/pwnednomore-contracts"]
-	path = lib/pwnednomore-contracts
+[submodule "lib/pnm-contracts"]
+	path = lib/pnm-contracts
 	url = https://github.com/pwnednomore/pnm-contracts
 [submodule "lib/openzeppelin-contracts"]
 	path = lib/openzeppelin-contracts
