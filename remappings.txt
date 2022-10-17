@@ -1,0 +1,2 @@
+@pwnednomore/contracts/=lib/pwnednomore-contracts/
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
