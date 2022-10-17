@@ -14,10 +14,13 @@ contract BasicIntegrationTest is FuzzIntegrationTest {
     address owner = address(0x1);
     address user = address(0x37);
     ERC20 usdc_contract;
-    VulnerableDoor target = VulnerableDoor(0x00001);
+    VulnerableDoor target;
 
     function setUp() public {
-        vm.addTargetContract(0x00001);
+        asAccountBegin(owner);
+        usdc_contract = new ERC20("USDC", "USDC");
+        target = new VulnerableDoor();
+        asAccountEnd();
     }
 
     // This function will be called randomly along with other methods in the target contract
