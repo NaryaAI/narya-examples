@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@pwnednomore/contracts/forge-std/console.sol";
+import "forge-std/console.sol";
 
 interface IMalware {
     function hello() external;

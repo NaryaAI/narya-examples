@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import {FuzzIntegrationTest} from "@pwnednomore/contracts/FuzzIntegrationTest.sol";
+import {PTest} from "@pwnednomore/contracts/PTest.sol";
 import {VulnerableDoor} from "src/callback/VulnerableDoor.sol";
 
 // A fuzz integration test runs in following patterns:
@@ -10,7 +10,7 @@ import {VulnerableDoor} from "src/callback/VulnerableDoor.sol";
 // 2. Call a random function in target contract, or a random `action_XXX` function in this test contract
 // 3. testContract.test_XXX(), which is specified when this test runs
 // 4. Goto step 2
-contract BasicIntegrationTest is FuzzIntegrationTest {
+contract BasicTest is PTest {
     address owner = address(0x1);
     address user = address(0x37);
     ERC20 usdc_contract;
@@ -44,10 +44,9 @@ contract BasicIntegrationTest is FuzzIntegrationTest {
         assert(!target.is_open());
     }
 
-    // If any these functions accept parameters, we will feed in intellegently selected random data
-    // For more structured data, you could write your own factory util functions
-    // function test_doorCanAlwaysBePaint(string memory color) external {
-    //     target.paint(color);
-    //     require(keccak256(bytes(target.color())) == keccak256(bytes(color)));
-    // }
+    // This function will be called again and again, with intelligently selected random data
+    function test_doorCanAlwaysBePaint(string memory color) external {
+        target.paint(color);
+        require(keccak256(bytes(target.color())) == keccak256(bytes(color)));
+    }
 }
