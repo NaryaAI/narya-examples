@@ -8,6 +8,7 @@ import "src/Vault.sol";
 contract ERC4626RedeemTest is PTest {
     address owner = address(0x1);
     address alice = address(0x927);
+    address agent;
 
     uint256 amount = 1;
 
@@ -23,7 +24,7 @@ contract ERC4626RedeemTest is PTest {
         asAccountForNextCall(alice);
         vault.mint(1, alice);
 
-        useDefaultAgent();
+        agent = getAgent();
     }
 
     function invariantRedeem() external {

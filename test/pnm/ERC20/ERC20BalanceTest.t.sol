@@ -7,6 +7,7 @@ import "src/Token.sol";
 contract ERC20BalanceTest is PTest {
     address owner = address(0x1);
     address user = address(0x927);
+    address agent;
 
     Token token;
 
@@ -16,7 +17,7 @@ contract ERC20BalanceTest is PTest {
         token.transfer(user, 50);
         vm.stopPrank();
 
-        useDefaultAgent();
+        agent = getAgent();
     }
 
     function invariantBalanceShouldNotChange() public view {

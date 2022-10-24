@@ -11,13 +11,15 @@ contract DAOTest is PTest {
     uint256 user_eth_amount = 1 ether;
     uint256 agent_eth_amount = 100000 wei;
 
+    address agent;
+
     function setUp() public {
         dao = new DAO();
 
         hoax(user, user_eth_amount);
         dao.deposit{value: user_eth_amount}(user);
 
-        useDefaultAgent();
+        agent = getAgent();
         hoax(agent, agent_eth_amount);
         dao.deposit{value: agent_eth_amount}(agent);
     }

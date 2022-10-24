@@ -9,12 +9,13 @@ contract SimpleDexTest is PTest {
     address owner = address(0x1);
     address lp = address(0x37);
     address user = address(0x38);
+    address agent;
 
     Token token;
     SimpleDex target;
 
     function setUp() public {
-        useDefaultAgent();
+        agent = getAgent();
 
         vm.startPrank(owner);
 

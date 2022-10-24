@@ -14,8 +14,6 @@ contract VulnerableDoorTest is PTest {
 
     function setUp() public {
         target = new VulnerableDoor();
-
-        useDefaultAgent();
     }
 
     function invariantNotStolen() public view {

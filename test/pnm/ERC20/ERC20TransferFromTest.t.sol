@@ -7,6 +7,7 @@ import "src/Token.sol";
 contract ERC20TransferFromTest is PTest {
     address owner = address(0x1);
     address alice = address(0x927);
+    address agent;
 
     Token token;
 
@@ -16,8 +17,8 @@ contract ERC20TransferFromTest is PTest {
         token.transfer(alice, 50);
         vm.stopPrank();
 
-        useDefaultAgent();
-        asAccountForNextCall(alice);
+        agent = getAgent();
+        asAccountForNextCall(agent);
         token.approve(agent, 20);
     }
 

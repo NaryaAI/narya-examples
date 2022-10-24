@@ -7,6 +7,8 @@ import "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 import "@pwnednomore/contracts/PTest.sol";
 
 contract FlagUpgradeableTest is PTest {
+    address agent;
+
     ERC1967Proxy proxy;
     UUPSUpgradeableMock mock;
 
@@ -17,7 +19,7 @@ contract FlagUpgradeableTest is PTest {
             abi.encodeWithSignature("initialize()")
         );
 
-        useDefaultAgent();
+        agent = getAgent();
     }
 
     // flag1 should always be true

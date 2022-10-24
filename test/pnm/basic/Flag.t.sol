@@ -9,8 +9,6 @@ contract FlagTest is PTest {
 
     function setUp() public {
         flag = new Flag();
-
-        useDefaultAgent();
     }
 
     function testSetFlags(int256 x, int256 y) public {
@@ -21,5 +19,9 @@ contract FlagTest is PTest {
 
     function invariantFlagIsTrue() public view {
         assert(flag.flag1());
+    }
+
+    function invariantBad() public {
+        assert(1 == 0);
     }
 }

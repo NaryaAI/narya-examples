@@ -7,10 +7,12 @@ import "@pwnednomore/contracts/PTest.sol";
 contract StructTest is PTest {
     Struct st;
 
+    address agent;
+
     function setUp() public {
         st = new Struct();
 
-        useDefaultAgent();
+        agent = getAgent();
     }
 
     function testSetFlags(Param calldata x, Param calldata y) public {

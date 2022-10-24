@@ -8,6 +8,7 @@ import "src/GameItems.sol";
 contract ERC1155SafeTransferFromTest is PTest, IERC1155Receiver {
     address owner = address(0x1);
     address alice = address(0x927);
+    address agent;
 
     GameItems gameItems;
     uint256 initAmount = 50;
@@ -24,7 +25,7 @@ contract ERC1155SafeTransferFromTest is PTest, IERC1155Receiver {
         gameItems.safeBatchTransferFrom(owner, alice, items, amounts, "");
         vm.stopPrank();
 
-        useDefaultAgent();
+        agent = getAgent();
     }
 
     function testSafeTransferFrom(

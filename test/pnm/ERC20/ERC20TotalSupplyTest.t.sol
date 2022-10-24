@@ -6,6 +6,7 @@ import "src/Token.sol";
 
 contract ERC20TotalSupplyTest is PTest {
     address owner = address(0x1);
+    address agent;
 
     Token token;
     uint256 totalSupply;
@@ -16,7 +17,7 @@ contract ERC20TotalSupplyTest is PTest {
         totalSupply = token.totalSupply();
         vm.stopPrank();
 
-        useDefaultAgent();
+        agent = getAgent();
     }
 
     function invariantTotalSupplyShouldNeverChange() public view {

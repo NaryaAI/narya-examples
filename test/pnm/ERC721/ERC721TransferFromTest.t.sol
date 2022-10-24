@@ -6,6 +6,7 @@ import "src/PFP.sol";
 
 contract ERC721TransferFromTest is PTest {
     address alice = address(0x927);
+    address agent;
 
     PFP pfp;
     uint256 id1;
@@ -15,7 +16,7 @@ contract ERC721TransferFromTest is PTest {
         pfp = new PFP();
         id1 = pfp.mint(alice, "https://pnm.xyz/1");
 
-        useDefaultAgent();
+        agent = getAgent();
     }
 
     function testTransferFrom(uint256 id) public {
