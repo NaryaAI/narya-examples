@@ -5,11 +5,17 @@ import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {PTest} from "@pwnednomore/contracts/PTest.sol";
 import {VulnerableDoor} from "src/callback/VulnerableDoor.sol";
 
-// A fuzz integration test runs in following patterns:
+// An invariant test runs as follows:
 // 1. testContract.setup()
-// 2. Call a random function in target contract, or a random `action_XXX` function in this test contract
-// 3. testContract.test_XXX(), which is specified when this test runs
+// 2. Call a random function in target contract, or a random `actionXXX` function in this test contract
+// 3. testContract.invariantXXX(), which is specified when this test runs
 // 4. Goto step 2
+//
+// The `testXXX` named functions are Property Tests. They will be
+// called multiple times with different smartly guessed random inputs.
+//
+// Both test types can share the same `setUp()` function. For more details,
+// see https://pwned-no-more.notion.site/Property-test-and-invariant-test-c6b80f6b6136408ba41247c0be561fe2
 contract BasicTest is PTest {
     address owner = address(0x1);
     address user = address(0x37);
@@ -45,7 +51,7 @@ contract BasicTest is PTest {
     }
 
     // This function will be called again and again, with intelligently selected random data
-    function test_doorCanAlwaysBePaint(string memory color) external {
+    function testDoorCanAlwaysBePaint(string memory color) external {
         target.paint(color);
         require(keccak256(bytes(target.color())) == keccak256(bytes(color)));
     }
