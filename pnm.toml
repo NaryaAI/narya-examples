@@ -3,16 +3,18 @@
 # All possible options are listed here.
 
 
-# This is the base profile for all other profiles. Properties will be inherited
+# This is the base profile for all other profiles. Properties will be inherited.
+# All options can also be defined for individual profiles, unless explicitly noted.
 [profile.default]
 # Relative path from the git repo root to the Ethereum project repo.
 # Use this if you are using mono-repo pattern.
-# This option is only recognized in this default profile
+# Only in default profile.
 root = "./ethereum_contracts"
 
 # How many reports to be found before considering it's a pass test.
 # Default is 1
 report_limit = 1
+
 # How many seconds to run before considering it's a pass test.
 # Default is 15 min
 time_limit = 900
