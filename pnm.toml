@@ -12,10 +12,12 @@
 root = "./ethereum_contracts"
 
 # How many reports to be found before considering it's a pass test.
+# Range: [1, 100]
 # Default is 1
 report_limit = 1
 
 # How many seconds to run before considering it's a pass test.
+# Range: [10, 86400] // 10s to 1day
 # Default is 15 min
 time_limit = 900
 
