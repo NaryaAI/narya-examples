@@ -1,0 +1,36 @@
+# PNM specific configs
+# Don't be confused with the Foundry configs, which should go to the foundry.toml file at the project root.
+# All possible options are listed here.
+
+
+# This is the base profile for all other profiles. Properties will be inherited
+[profile.default]
+# Relative path from the git repo root to the Ethereum project repo.
+# Use this if you are using mono-repo pattern.
+# This option is only recognized in this default profile
+root = "./ethereum_contracts"
+
+# How many reports to be found before considering it's a pass test.
+# Default is 1
+report_limit = 1
+# How many seconds to run before considering it's a pass test.
+# Default is 15 min
+time_limit = 900
+
+
+# You could have multiple profiles with different settings.
+# Our engine will look them up based on the test id.
+# Profile name could be arbitrary
+[profile.mainnet]
+
+# The list of test id where this profile could be applied on.
+# Format: `path/to/contract/file.sol:ContractName:testSignature(uint256)`
+# You could use our CLI tools `pnm build` to print out all recognized test ids.
+test_ids = [
+  "test/pnm/MyTestContract.t.sol:MyTestContract:invariantMyTest(uint256,uint16)",
+]
+
+# Custom source file mappings for library linking
+# You could use this map to completely replace all references to a Solidity contract to another one.
+# Format: `path/to/contract/source_file.sol:MySourceContract:path/to/contract/target_file.sol:MyTargetContract`
+libraries = ["contracts/libraries/MySourceLibrary.sol:MySourceLibrary:contracts/libraries/MyTargetLibrary.sol:MyTargetLibrary"]
