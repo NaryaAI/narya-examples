@@ -659,10 +659,10 @@
   resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.7.3.tgz#939534757a81f8d69cc854c7692805684ff3111e"
   integrity sha512-dGRS0agJzu8ybo44pCIf3xBaPQN/65AIXNgK8+4gzKd5kbvlqyxryUYVLJv7fK98Seyd2hDZzVEHSWAh0Bt1Yw==
 
-"@pwnednomore/contracts@0.2.8":
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/@pwnednomore/contracts/-/contracts-0.2.8.tgz#2bca6e6557cc02ee6fa0d61a36ea0c97a8eb6dff"
-  integrity sha512-VJY9xXFEE++0p/zRu5P/PEHkAQJlhw4/UWsFcaEMwoJ1joXQl40H8NZP5EkBsGlTMkRMVeJgPoa8Grbyy7sXzQ==
+"@pwnednomore/contracts@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@pwnednomore/contracts/-/contracts-0.3.0.tgz#a46776667483eb64c12563ee84bdee5371f53574"
+  integrity sha512-WYb4gulBfsoQArKRMLaNefYv8ep5exPBW8rRgxa9fbeletIKnlYqJ932YJIbhrnxtPwZUiR4C+veDmZvMz3LCw==
 
 "@scure/base@~1.1.0":
   version "1.1.1"
