@@ -9,17 +9,7 @@
 # Relative path from the git repo root to the Ethereum project repo.
 # Use this if you are using mono-repo pattern.
 # Only in default profile.
-root = "./ethereum_contracts"
-
-# How many reports to be found before considering it's a pass test.
-# Range: [1, 100]
-# Default is 10
-report_limit = 10
-
-# How many seconds to run before considering it's a pass test.
-# Range: [10, 3600] // 10s to 1h
-# Default is 15 min
-time_limit = 900
+root = "./"
 
 
 # You could have multiple profiles with different settings.
