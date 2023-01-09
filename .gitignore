@@ -1,3 +1,7 @@
+# PNM files
+/pnm-cov.json
+/reports
+
 # Hardhat version
 /node_modules
 /cache
