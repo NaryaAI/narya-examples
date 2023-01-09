@@ -9,7 +9,7 @@
 # Relative path from the git repo root to the Ethereum project repo.
 # Use this if you are using mono-repo pattern.
 # Only in default profile.
-root = "./ethereum_contracts"
+root = "."
 
 
 # You could have multiple profiles with different settings.
