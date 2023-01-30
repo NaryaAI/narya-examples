@@ -3,6 +3,24 @@
 # All possible options are listed here.
 
 
+# This defines metadata for your project
+[project]
+
+# The networks your contract would run on
+[[project.networks]]
+name = "ethereum"
+[[project.networks]]
+name = "avalanche"
+
+# External contracts that your tests would interact with
+[[project.external_contracts]]
+network = "ethereum"
+address = "0x0000000000000000000000000000000000000001"
+[[project.external_contracts]]
+network = "avalanche"
+address = "0x0000000000000000000000000000000000000002"
+
+
 # This is the base profile for all other profiles. Properties will be inherited.
 # All options can also be defined for individual profiles, unless explicitly noted.
 [profile.default]
@@ -10,6 +28,9 @@
 # Use this if you are using mono-repo pattern.
 # Only in default profile.
 root = "."
+
+# The command you would like to run before project compilation, after dependencies are installed
+beforeSetup = "echo beforeSetup"
 
 
 # You could have multiple profiles with different settings.
