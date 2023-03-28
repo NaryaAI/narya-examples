@@ -1,7 +1,6 @@
 [profile.default]
 src = 'src'
 out = 'out'
+test = 'test'
 libs = ['lib']
-solc_version = '0.8.16'
-
-# See more config options https://github.com/foundry-rs/foundry/tree/master/config
+cache_path  = 'cache'

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-import "@pwnednomore/contracts/PTest.sol";
+import "@narya-ai/contracts/PTest.sol";
 import "src/PFP.sol";
 
 contract ERC721OwnerTest is PTest {
@@ -12,7 +12,7 @@ contract ERC721OwnerTest is PTest {
 
     function setUp() public {
         pfp = new PFP();
-        id = pfp.mint(user, "https://pnm.xyz/1");
+        id = pfp.mint(user, "https://narya.ai/1");
     }
 
     function invariantOwner() public view {

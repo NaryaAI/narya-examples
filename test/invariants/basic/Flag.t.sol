@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "src/basic/Flag.sol";
-import "@pwnednomore/contracts/PTest.sol";
+import "@narya-ai/contracts/PTest.sol";
 
 contract FlagTest is PTest {
     Flag flag;

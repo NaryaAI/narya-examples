@@ -1,4 +1,4 @@
-# PNM specific configs
+# Narya specific configs
 # Don't be confused with the Foundry configs, which should go to the foundry.toml file at the project root.
 # All possible options are listed here.
 
@@ -40,9 +40,9 @@ beforeSetup = "echo beforeSetup"
 
 # The list of test id where this profile could be applied on.
 # Format: `path/to/contract/file.sol:ContractName:testSignature(uint256)`
-# You could use our CLI tools `pnm build` to print out all recognized test ids.
+# You could use our CLI tools `narya build` to print out all recognized test ids.
 test_ids = [
-  "test/pnm/MyTestContract.t.sol:MyTestContract:invariantMyTest(uint256,uint16)",
+  "test/MyTestContract.t.sol:MyTestContract:invariantMyTest(uint256,uint16)",
 ]
 
 # Custom source file mappings for library linking

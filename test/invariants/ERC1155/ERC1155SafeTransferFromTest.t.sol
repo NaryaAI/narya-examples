@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-import "@pwnednomore/contracts/PTest.sol";
+import "@narya-ai/contracts/PTest.sol";
 import "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol";
 import "src/GameItems.sol";
 
@@ -29,13 +29,13 @@ contract ERC1155SafeTransferFromTest is PTest, IERC1155Receiver {
     }
 
     function testSafeTransferFrom(
-        // bool approved, // add it back in PNM engine.
-        // GameItems.Item item, // add it back in PNM engine.
+        // bool approved, // add it back in the test engine.
+        // GameItems.Item item, // add it back in the test engine.
         uint256 amount
     ) public {
-        vm.assume(amount <= initAmount && amount > 0); // remove this in PNM engine.
-        bool approved = true; // remove this in PNM engine.
-        GameItems.Item item = GameItems.Item.GOLD; // remove this in PNM engine.
+        vm.assume(amount <= initAmount && amount > 0); // remove this in the test engine.
+        bool approved = true; // remove this in the test engine.
+        GameItems.Item item = GameItems.Item.GOLD; // remove this in the test engine.
 
         uint256 id = uint256(item);
         uint256 aliceBalance = gameItems.balanceOf(alice, id);

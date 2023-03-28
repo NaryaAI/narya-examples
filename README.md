@@ -1,27 +1,26 @@
-# PwnedNoMore Invariant Examples
+# Narya.ai Invariant Examples
 
-## Base
+Narya engine works the best with [Foundry](https://github.com/foundry-rs/foundry) framework.
+If you use [Hardhat](https://hardhat.org/), you may want to check
+[this Hardhat doc](https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry)
+to make sure they could co-exist.
 
-Two main test frameworks are supported: [Hardhat](https://hardhat.org/) and [Forge](https://github.com/foundry-rs/foundry/tree/master/forge).
+## CLI
 
-This example folder supports both at the same time.
+Install Narya CLI tool following steps here: [NaryaAI/narya-cli](https://github.com/NaryaAI/narya-cli)
 
-## Build
+## Setup
 
 ```bash
-# As Hardhat repo
-yarn install
-yarn hardhat compile
+git submodule update --init --recursive
+```
 
-# As Forge repo
-git submodule update --init
-forge build
+## Validate tests
+
+```bash
+narya test
 ```
 
 ## Run tests
 
-Currently, PNM invariants could only be run with Forge framework.
-
-```bash
-forge test
-```
+You need to push the tests to http://narya.ai for full test coverage.

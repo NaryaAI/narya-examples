@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import {PTest} from "@pwnednomore/contracts/PTest.sol";
+import {PTest} from "@narya-ai/contracts/PTest.sol";
 import {VulnerableDoor} from "src/callback/VulnerableDoor.sol";
 
 // An invariant test runs as follows:
@@ -15,7 +15,7 @@ import {VulnerableDoor} from "src/callback/VulnerableDoor.sol";
 // called multiple times with different smartly guessed random inputs.
 //
 // Both test types can share the same `setUp()` function. For more details,
-// see https://pwned-no-more.notion.site/Property-test-and-invariant-test-c6b80f6b6136408ba41247c0be561fe2
+// see https://docs.narya.ai/test_types
 contract BasicTest is PTest {
     address owner = address(0x1);
     address user = address(0x37);

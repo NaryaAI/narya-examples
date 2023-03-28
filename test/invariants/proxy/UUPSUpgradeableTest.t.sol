@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "src/proxy/UUPSUpgradeableMock.sol";
 import "src/interfaces/IUUPSUpgradeableMock.sol";
 import "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol";
-import "@pwnednomore/contracts/PTest.sol";
+import "@narya-ai/contracts/PTest.sol";
 
 contract FlagUpgradeableTest is PTest {
     address agent;

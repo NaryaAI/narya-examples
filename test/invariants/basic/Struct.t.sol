@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "src/basic/Struct.sol";
-import "@pwnednomore/contracts/PTest.sol";
+import "@narya-ai/contracts/PTest.sol";
 
 contract StructTest is PTest {
     Struct st;

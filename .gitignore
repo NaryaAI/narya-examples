@@ -1,14 +1,11 @@
-# PNM files
-/pnm-cov.json
+# Narya
 /reports
 
-# Hardhat version
+# Hardhat
 /node_modules
 /cache
 /artifacts
-/typechain
-/typechain-types
 
-# Foundry version
-/cache
+# Foundry
+/cache_forge
 /out

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "src/callback/Dao.sol";
-import "@pwnednomore/contracts/PTest.sol";
+import "@narya-ai/contracts/PTest.sol";
 
 contract DAOTest is PTest {
     DAO dao;

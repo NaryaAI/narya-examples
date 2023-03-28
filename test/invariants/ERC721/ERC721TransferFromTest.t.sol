@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-import "@pwnednomore/contracts/PTest.sol";
+import "@narya-ai/contracts/PTest.sol";
 import "src/PFP.sol";
 
 contract ERC721TransferFromTest is PTest {
@@ -14,7 +14,7 @@ contract ERC721TransferFromTest is PTest {
 
     function setUp() public {
         pfp = new PFP();
-        id1 = pfp.mint(alice, "https://pnm.xyz/1");
+        id1 = pfp.mint(alice, "https://narya.ai/1");
 
         agent = getAgent();
     }

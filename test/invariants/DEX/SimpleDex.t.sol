@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@pwnednomore/contracts/PTest.sol";
+import "@narya-ai/contracts/PTest.sol";
 import {SimpleDex} from "src/SimpleDex.sol";
 import {Token} from "src/Token.sol";
 
